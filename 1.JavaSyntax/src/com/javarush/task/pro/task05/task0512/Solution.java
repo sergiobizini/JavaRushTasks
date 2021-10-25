@@ -15,7 +15,6 @@ public class Solution {
                     System.out.println(multiArray[i][j][k]);
                 }
             }
-
         }
     }
 }
