@@ -20,7 +20,21 @@ public class Solution {
     }
 
     public static ArrayList<String> fix(ArrayList<String> strings) {
-        //напишите тут ваш код
-        return null;
+        for (int i = 0; i < strings.size(); i++) {
+            if(strings.get(i).indexOf("р") >= 0 && strings.get(i).indexOf("л") >= 0){
+                continue;
+            }
+            if(strings.get(i).indexOf("р") >= 0){
+                strings.remove(i);
+                i--;
+                continue;
+            }
+            if(strings.get(i).indexOf("л") >= 0){
+                strings.add(i,strings.get(i));
+                i++;
+                continue;
+            }
+        }
+        return strings;
     }
 }
