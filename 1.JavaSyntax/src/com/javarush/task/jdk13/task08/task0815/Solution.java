@@ -9,18 +9,34 @@ import java.util.Map;
 
 public class Solution {
     public static Map<String, String> createMap() {
-        //напишите тут ваш код
-
+        Map<String,String> map = new HashMap<>(10);
+        map.put("Иванов","Иван");
+        map.put("Петров","Сергей");
+        map.put("Сидоров","Петр");
+        map.put("Кунаев","Александр");
+        map.put("Анохин","Семен");
+        map.put("Журавлев","Олег");
+        map.put("Солодов","Николай");
+        map.put("Марков","Станислав");
+        map.put("Никитский","Федор");
+        map.put("Олеринский","Тимофей");
+        return map;
     }
 
     public static int getCountTheSameFirstName(Map<String, String> map, String name) {
-        //напишите тут ваш код
-
+        int count = 0;
+        for(Map.Entry i : map.entrySet()){
+            if (i.getValue().equals(name)) count++;
+        }
+        return count;
     }
 
     public static int getCountTheSameLastName(Map<String, String> map, String lastName) {
-        //напишите тут ваш код
-
+        int count = 0;
+        for(Map.Entry i : map.entrySet()) {
+            if (i.getKey().equals(lastName)) count++;
+        }
+        return count;
     }
 
     public static void main(String[] args) {
