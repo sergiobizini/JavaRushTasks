@@ -18,6 +18,9 @@ public class Solution {
         catch (Error e){
             printStack(e);
         }
+        catch (RuntimeException e){
+            printStack(e);
+        }
     }
 
     public static void printStack(Throwable throwable) {
